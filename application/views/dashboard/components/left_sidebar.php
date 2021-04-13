@@ -27,11 +27,6 @@
                         </div>
                         <p class="text-muted"><?php echo $this->session->userdata('phone');?></p>
                         <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="<?php echo base_url("User/get_api");?>" class="text-muted">
-                                    <i class="mdi mdi-cog"></i>
-                                </a>
-                            </li>
 
                             <li class="list-inline-item">
                                 <a href="<?php echo base_url("Login/Logout");?>">

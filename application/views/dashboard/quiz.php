@@ -35,7 +35,7 @@
                     <?php } ?>
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <a href="<?php echo base_url("Urunler/listele");?>" class="btn btn-danger">İptal</a>
+                            <a href="<?php echo base_url("Testler");?>" class="btn btn-danger">İptal</a>
                         </div>
                         <div class="form-group col-md-4">
                             <button id="bitir" class="btn btn-primary float-right">Kaydet</button>
