@@ -66,12 +66,11 @@ $(document).ready(function() {
         });
         $.ajax({
             type: "POST",
-            url: url,
-            data: data,
-            success: success,
-            dataType: dataType
+            url: "<?php echo base_url("Sonuclandir/sonuclandir");?>",
+            data: {Answ:JSON.stringify(answersList)},
+            dataType: "text",
         });
-        console.log(answersList);
+        window.location.href = "<?php echo base_url("Testler");?>";
     });
 });
 </script>

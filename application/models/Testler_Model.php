@@ -37,8 +37,13 @@ class Testler_Model extends CI_Model
         return $this->db->select("cevaplar.soru_id,cevaplar.id,secenek,soru,resim")->from($this->tablo_sorular)->join("cevaplar","sorular.id = cevaplar.soru_id")->where($where)->get()->result();
     }
 
-    public function test($data)
+    public function sonuclandir($data)
     {
-        return $this->db->insert($data,"sorular");
+        return $this->db->insert($this->tablo_sonuclar,$data);
+    }
+
+    public function puan_getir($where)
+    {
+        return $this->db->where($where)->get("cevaplar")->row();
     }
 }

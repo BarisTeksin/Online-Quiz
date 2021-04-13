@@ -42,9 +42,6 @@ class Testler extends CI_Controller {
         $config['num_tag_close'] = '</li>';
         $this->pagination->initialize($config);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-        $where = array(
-            "user_id" => $this->session->userdata("uid"),
-        );
         $test_no = $this->Testler_Model->aktif_test();
         $where = array(
             "user_id" => $this->session->userdata("uid"),
@@ -92,17 +89,6 @@ class Testler extends CI_Controller {
         }else{
             $this->session->set_flashdata("error","Testi daha önce çözdünüz");
             redirect(base_url("Testler"));
-        }
-    }
-
-    public function sonuclandir()
-    {
-        if(isset($_POST)){
-            $data = $_POST;
-            $send_data = array();
-            foreach ($data as $soru) {
-                
-            }
         }
     }
 
