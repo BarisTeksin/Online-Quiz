@@ -87,7 +87,7 @@ class Testler extends CI_Controller {
                 $Test_Data["Sorular"][$data->soru_id]["Cevaplar"][] = array("Cevap" => $data->secenek, "Secenek_No" => $data->id);
             }
             #header('Content-Type: application/json');   
-            $this->load->view("dashboard/add_product",$Test_Data);
+            $this->load->view("dashboard/quiz",$Test_Data);
 
         }else{
             $this->session->set_flashdata("error","Testi daha önce çözdünüz");
