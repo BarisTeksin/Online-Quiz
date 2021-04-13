@@ -20,4 +20,9 @@ class Dashboard_Model extends CI_Model
     {
         return $this->db->where($where)->order_by("id","DESC")->limit(5)->get($this->tablo_sonuclar)->result();
     }
+
+    public function Son_Bes_Ort($where)
+    {
+        return $this->db->select_avg('puan')->where($where)->order_by("id","DESC")->limit(5)->get($this->tablo_sonuclar)->row()->puan;
+    }
 }

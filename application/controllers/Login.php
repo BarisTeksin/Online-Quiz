@@ -45,5 +45,6 @@ class Login extends CI_Controller {
         $this->session->unset_userdata("name");
         $this->session->unset_userdata("phone");
         $this->session->unset_userdata("profil");
+        redirect(base_url("Login"));
     }
 }

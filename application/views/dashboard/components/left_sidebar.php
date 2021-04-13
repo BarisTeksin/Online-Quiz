@@ -16,10 +16,6 @@
                                 </a>
     
                                 <!-- item-->
-                                <a href="<?php echo base_url("User/get_api");?>" class="dropdown-item notify-item">
-                                    <i class="fe-settings mr-1"></i>
-                                    <span>Kullanıcı Bilgileri</span>
-                                </a>
 
                                 <!-- item-->
                                 <a href="<?php echo base_url("Login/Logout");?>" class="dropdown-item notify-item">

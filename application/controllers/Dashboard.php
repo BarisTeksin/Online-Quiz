@@ -21,8 +21,9 @@ class Dashboard extends CI_Controller {
             "testler.id" => $test_no->id
         );
         $data = array(
-            "Test_Sayisi" => $this->Dashboard_Model->Test_Sayisi($this->session->userdata("uid")),
-            "Son_Bes" => $this->Dashboard_Model->Son_Bes_Sonuc($this->session->userdata("uid")),
+            "Test_Sayisi" => $this->Dashboard_Model->Test_Sayisi(array("user_id" => $this->session->userdata("uid"))),
+            "Son_Bes" => $this->Dashboard_Model->Son_Bes_Sonuc(array("user_id" => $this->session->userdata("uid"))),
+            "Son_Ort" => round($this->Dashboard_Model->Son_Bes_Ort(array("user_id" => $this->session->userdata("uid"))),1)
         );
         if($this->Testler_Model->aktif_test_sorgula($where)->num_rows() == 0){
             $data["Uyari"] = "Aktif testiniz mevcut";

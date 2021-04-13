@@ -51,15 +51,11 @@
                             </a>
 
                             <!-- item-->
-                            <a href="<?php echo base_url("User/get_api");?>" class="dropdown-item notify-item">
-                                <i class="fe-settings"></i>
-                                <span>Api bilgileri</span>
-                            </a>
 
                             <div class="dropdown-divider"></div>
 
                             <!-- item-->
-                            <a href="<?php echo base_url("User/Logout");?>" class="dropdown-item notify-item">
+                            <a href="<?php echo base_url("Login/Logout");?>" class="dropdown-item notify-item">
                                 <i class="fe-log-out"></i>
                                 <span>Çıkış Yap</span>
                             </a>
